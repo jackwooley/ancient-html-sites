@@ -22,7 +22,7 @@ jobs:
       - name: Upload files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'pages/' # This deploys your whole repo. Change to './dist' if your site is in a folder.
+          path: './pages' # This deploys your whole repo. Change to './dist' if your site is in a folder.
 
       - name: Deploy
         uses: actions/deploy-pages@v4
