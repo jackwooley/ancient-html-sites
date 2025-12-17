@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 CONGRATULATIONS MACK! 🎉</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-image: url('data:image/svg+xml,<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="wood" width="200" height="200" patternUnits="userSpaceOnUse"><rect fill="%23654321" width="200" height="200"/><rect fill="%23543210" x="0" y="40" width="200" height="8"/><rect fill="%23765432" x="0" y="80" width="200" height="12"/><rect fill="%23543210" x="0" y="120" width="200" height="6"/><rect fill="%23876543" x="0" y="160" width="200" height="10"/><ellipse cx="50" cy="100" rx="15" ry="25" fill="%23432100" opacity="0.3"/><ellipse cx="150" cy="60" rx="20" ry="30" fill="%23432100" opacity="0.2"/><line x1="0" y1="20" x2="200" y2="25" stroke="%23765432" stroke-width="2"/><line x1="0" y1="100" x2="200" y2="98" stroke="%23876543" stroke-width="1.5"/><line x1="0" y1="140" x2="200" y2="142" stroke="%23543210" stroke-width="2.5"/></pattern></defs><rect width="200" height="200" fill="url(%23wood)"/></svg>');
+            background-size: 200px 200px;
+            overflow-x: hidden;
+            font-family: 'Times New Roman', serif;
+            min-height: 3000px;
+        }
+
+        @keyframes rainbow {
+            0% { color: red; }
+            16% { color: orange; }
+            33% { color: yellow; }
+            50% { color: lime; }
+            66% { color: cyan; }
+            83% { color: magenta; }
+            100% { color: red; }
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0) rotate(0deg); }
+            25% { transform: translateX(-15px) rotate(-5deg); }
+            75% { transform: translateX(15px) rotate(5deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(150px, -80px) rotate(90deg); }
+            50% { transform: translate(300px, 0) rotate(180deg); }
+            75% { transform: translate(150px, 80px) rotate(270deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
+        }
+
+        @keyframes float2 {
+            0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+            25% { transform: translate(-100px, 100px) rotate(-90deg) scale(1.5); }
+            50% { transform: translate(0, 200px) rotate(-180deg) scale(0.8); }
+            75% { transform: translate(100px, 100px) rotate(-270deg) scale(1.2); }
+            100% { transform: translate(0, 0) rotate(-360deg) scale(1); }
+        }
+
+        @keyframes explosion {
+            0% { transform: scale(0); opacity: 1; }
+            50% { transform: scale(3); opacity: 0.7; }
+            100% { transform: scale(6); opacity: 0; }
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-10deg); }
+            50% { transform: rotate(10deg); }
+        }
+
+        .title {
+            text-align: center;
+            font-size: 82px;
+            font-weight: bold;
+            color: lime;
+            text-shadow: 
+                6px 6px 0 purple,
+                12px 12px 0 rgba(128, 0, 128, 0.7),
+                18px 18px 30px rgba(0, 255, 0, 0.9);
+            transform: scaleY(2.3);
+            animation: rainbow 2s infinite, shake 0.3s infinite;
+            margin: 40px 0;
+            letter-spacing: 8px;
+        }
+
+        .floating-object {
+            position: absolute;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            z-index: 100;
+        }
+
+        .golf-ball {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            border: 3px solid black;
+            box-shadow: inset -8px -8px 15px rgba(0,0,0,0.4);
+        }
+
+        .chef-hat {
+            font-size: 80px;
+            animation: spin 2s infinite linear, bounce 1.5s infinite;
+        }
+
+        .sooners-logo {
+            width: 100px;
+            height: 100px;
+            background: crimson;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 32px;
+            border: 4px solid white;
+        }
+
+        .explosion {
+            position: fixed;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, yellow, orange, red, transparent);
+            border-radius: 50%;
+            animation: explosion 0.8s infinite;
+        }
+
+        .marquee {
+            background: red;
+            color: yellow;
+            padding: 15px;
+            font-size: 32px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            margin: 30px 0;
+            border: 8px solid blue;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: scroll-left 8s linear infinite;
+        }
+
+        @keyframes scroll-left {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+
+        .distressed-emoji {
+            width: 100px;
+            display: inline-block;
+            animation: pulse 0.8s infinite, wiggle 0.5s infinite;
+        }
+
+        .ad-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 60px 0;
+        }
+
+        .ad {
+            width: 320px;
+            height: 280px;
+            border: 8px solid red;
+            margin: 15px;
+            background: linear-gradient(45deg, yellow, orange);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 25px;
+            animation: shake 0.2s infinite;
+            cursor: pointer;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.9);
+        }
+
+        .ad h3 {
+            color: red;
+            font-size: 32px;
+            margin: 10px 0;
+            text-shadow: 3px 3px 0 white;
+        }
+
+        .ad p {
+            color: blue;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .blink {
+            animation: blinker 0.7s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+
+        .gif-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        hr {
+            border: none;
+            height: 8px;
+            background: purple;
+            margin: 40px 0;
+            box-shadow: 0 0 20px purple;
+        }
+
+        .crazy-text {
+            font-size: 48px;
+            text-align: center;
+            animation: rainbow 1.5s infinite;
+            font-weight: bold;
+            margin: 30px 0;
+            text-shadow: 4px 4px 8px black;
+        }
+
+        .spinner {
+            animation: spin 1s infinite linear;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Audio element -->
+    <audio autoplay loop>
+        <source src="audio/665906__aminudinaszad__galaxy-orbit-edm.wav" type="audio/mpeg">
+    </audio>
+    <audio autoplay loop>
+        <source src="audio/718830__geoff-bremner-audio__chill-progressive-rock-metal-riffs.wav" type="audio/mpeg">
+    </audio>
+    <audio autoplay loop>
+        <source src="audio/835435__reticularbeats__trap-idea-inspired-by-shawty-redd-163.wav" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating objects scattered throughout the page -->
+    <div class="floating-object" style="top: 100px; left: 10%; animation-name: float; animation-delay: 0s;">
+        <div class="golf-ball"></div>
+    </div>
+    <div class="floating-object" style="top: 300px; left: 85%; animation-name: float2; animation-delay: 1s;">
+        <div class="golf-ball"></div>
+    </div>
+    <div class="floating-object" style="top: 500px; left: 15%; animation-name: float; animation-delay: 2s;">
+        <div class="chef-hat">👨‍🍳</div>
+    </div>
+    <div class="floating-object" style="top: 700px; left: 70%; animation-name: float2; animation-delay: 1.5s;">
+        <div class="chef-hat">🍳</div>
+    </div>
+    <div class="floating-object" style="top: 900px; left: 50%; animation-name: float; animation-delay: 2.5s;">
+        <div class="sooners-logo">OU</div>
+    </div>
+    <div class="floating-object" style="top: 1100px; left: 30%; animation-name: float2; animation-delay: 0.5s;">
+        <div class="golf-ball"></div>
+    </div>
+    <div class="floating-object" style="top: 1300px; left: 80%; animation-name: float; animation-delay: 3s;">
+        <div class="chef-hat">🔪</div>
+    </div>
+    <div class="floating-object" style="top: 1500px; left: 20%; animation-name: float2; animation-delay: 1.8s;">
+        <div class="sooners-logo">OU</div>
+    </div>
+    <div class="floating-object" style="top: 1700px; left: 60%; animation-name: float; animation-delay: 2.2s;">
+        <div class="golf-ball"></div>
+    </div>
+    <div class="floating-object" style="top: 1900px; left: 40%; animation-name: float2; animation-delay: 0.8s;">
+        <div class="chef-hat">🥄</div>
+    </div>
+    <div class="floating-object" style="top: 2100px; left: 75%; animation-name: float; animation-delay: 3.5s;">
+        <div class="sooners-logo">OU</div>
+    </div>
+    <div class="floating-object" style="top: 2300px; left: 25%; animation-name: float2; animation-delay: 1.2s;">
+        <div class="golf-ball"></div>
+    </div>
+    <div class="floating-object" style="top: 2500px; left: 65%; animation-name: float; animation-delay: 2.8s;">
+        <div class="chef-hat">🍴</div>
+    </div>
+    <div class="floating-object" style="top: 200px; left: 45%; animation-name: float2; animation-delay: 0.3s;">
+        <div class="sooners-logo">OU</div>
+    </div>
+    <div class="floating-object" style="top: 600px; left: 90%; animation-name: float; animation-delay: 4s;">
+        <div class="golf-ball"></div>
+    </div>
+
+    <!-- Explosions -->
+    <div class="explosion" style="top: 15%; left: 50%; animation-delay: 0s;"></div>
+    <div class="explosion" style="top: 45%; left: 20%; animation-delay: 0.3s;"></div>
+    <div class="explosion" style="top: 75%; left: 75%; animation-delay: 0.6s;"></div>
+    <div class="explosion" style="top: 30%; left: 80%; animation-delay: 0.2s;"></div>
+    <div class="explosion" style="top: 60%; left: 10%; animation-delay: 0.5s;"></div>
+
+    <!-- Marquees -->
+    <div class="marquee">
+        <div class="marquee-content">
+            ⚡️⚡️⚡️ BREAKING NEWS: MACK IS A WINNER! ⚡️⚡️⚡️ FREE GOLF! FREE GOLF! FREE GOLF! ⚡️⚡️⚡️ CLICK NOW! ⚡️⚡️⚡️
+        </div>
+    </div>
+
+    <h1 class="title">CONGRATULATIONS MACK YOU JUST WON A FREE GOLF OUTING</h1>
+
+    <div class="gif-container">
+        <img src="imgs/emoji-in-distress-emoji-sad.gif" alt="distressed emoji" class="distressed-emoji">
+        <img src="imgs/emoji-in-distress-emoji-sad.gif" alt="distressed emoji" class="distressed-emoji">
+        <img src="imgs/emoji-in-distress-emoji-sad.gif" alt="distressed emoji" class="distressed-emoji">
+        <img src="imgs/emoji-in-distress-emoji-sad.gif" alt="distressed emoji" class="distressed-emoji">
+    </div>
+
+    <hr>
+
+    <div class="marquee" style="background: lime; color: red;">
+        <div class="marquee-content">
+            🏌️ EXCLUSIVE OFFER! 🏌️ CLICK NOW! 🏌️ LIMITED TIME! 🏌️ YOU'RE THE 1000000th VISITOR! 🏌️ ACT FAST! 🏌️
+        </div>
+    </div>
+
+    <div class="crazy-text">
+        <span class="spinner">🎊</span> YOU ARE THE LUCKY WINNER! <span class="spinner">🎊</span>
+    </div>
+
+    <div style="text-align: center; margin: 40px 0;">
+        <h2 class="blink" style="font-size: 56px; color: red; text-shadow: 5px 5px 0 yellow;">
+            🎊🎊🎊 WINNER WINNER WINNER! 🎊🎊🎊
+        </h2>
+        <img src="imgs/emoji-in-distress-emoji-sad.gif" alt="distressed emoji" style="width: 150px; animation: spin 2s infinite linear;">
+        <p style="font-size: 32px; color: cyan; font-weight: bold; animation: rainbow 2s infinite; text-shadow: 3px 3px 0 black;">
+            😱😱😱 YOUR IP ADDRESS HAS BEEN SELECTED! 😱😱😱
+        </p>
+    </div>
+
+    <hr>
+
+    <div class="marquee" style="background: purple; color: yellow;">
+        <div class="marquee-content">
+            👨‍🍳 CHEF'S SPECIAL! ⛳️ GOLF EXTRAVAGANZA! 🏈 BOOMER SOONER! 👨‍🍳 AMAZING PRIZES! ⛳️ HURRY! 👨‍🍳
+        </div>
+    </div>
+
+    <div style="text-align: center; margin: 40px 0;">
+        <img src="imgs/emoji-in-distress-emoji-sad.gif" alt="distressed emoji" style="width: 120px; animation: bounce 1s infinite;">
+        <h3 style="font-size: 48px; color: orange; animation: rainbow 1.5s infinite; text-shadow: 4px 4px 0 purple;">
+            🔥🔥🔥 ACT NOW BEFORE TIME RUNS OUT! 🔥🔥🔥
+        </h3>
+        <img src="imgs/emoji-in-distress-emoji-sad.gif" alt="distressed emoji" style="width: 120px; animation: shake 0.5s infinite;">
+    </div>
+
+    <hr>
+
+    <div class="crazy-text" style="font-size: 64px;">
+        <span class="blink">⛳️</span> GOLF <span class="blink">⛳️</span> GOLF <span class="blink">⛳️</span> GOLF <span class="blink">⛳️</span>
+    </div>
+
+    <hr>
+
+    <!-- Clickbait Ads -->
+    <div class="ad-container">
+        <div class="ad">
+            <h3 class="blink">DOCTORS HATE HIM!</h3>
+            <p>Local man discovers weird trick to improve golf swing!</p>
+            <p style="color: red; font-size: 28px; animation: pulse 1s infinite;">CLICK HERE! →</p>
+        </div>
+
+        <div class="ad" style="background: linear-gradient(45deg, lime, cyan);">
+            <h3 class="blink">HOT SINGLES IN YOUR AREA!</h3>
+            <p>Golf instructors want to meet YOU!</p>
+            <p style="color: red; font-size: 28px; animation: pulse 1s infinite;">JOIN NOW! →</p>
+        </div>
+
+        <div class="ad" style="background: linear-gradient(45deg, pink, yellow);">
+            <h3 class="blink">YOU WON'T BELIEVE #7!</h3>
+            <p>Top 10 Oklahoma Sooners moments that will SHOCK you!</p>
+            <p style="color: red; font-size: 28px; animation: pulse 1s infinite;">WATCH NOW! →</p>
+        </div>
+
+        <div class="ad" style="background: linear-gradient(45deg, orange, red);">
+            <h3 class="blink">DOWNLOAD NOW!</h3>
+            <p>Free golf balls! Free chef hats! Free everything!</p>
+            <p style="color: blue; font-size: 28px; animation: pulse 1s infinite;">GET YOURS! →</p>
+        </div>
+
+        <div class="ad" style="background: linear-gradient(45deg, purple, pink);">
+            <h3 class="blink">CONGRATULATIONS!!!</h3>
+            <p>You've won an iPhone 47! (Not a scam, we promise)</p>
+            <p style="color: red; font-size: 28px; animation: pulse 1s infinite;">CLAIM PRIZE! →</p>
+        </div>
+
+        <div class="ad" style="background: linear-gradient(45deg, cyan, magenta);">
+            <h3 class="blink">URGENT MESSAGE!</h3>
+            <p>Your computer has 9999 viruses! Download our antivirus NOW!</p>
+            <p style="color: red; font-size: 28px; animation: pulse 1s infinite;">FIX NOW! →</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="marquee" style="background: cyan; color: red; font-size: 40px;">
+        <div class="marquee-content">
+            🎉 MACK MACK MACK MACK MACK 🏌️ GOLF GOLF GOLF 👨‍🍳 CHEF CHEF CHEF 🏈 BOOMER! 🎉 OU OU OU! 🎉
+        </div>
+    </div>
+
+    <div class="crazy-text" style="font-size: 72px; margin: 60px 0;">
+        <span class="spinner">🏆</span> WINNER <span class="spinner">🏆</span>
+    </div>
+
+    <hr>
+
+</body>
+</html>
